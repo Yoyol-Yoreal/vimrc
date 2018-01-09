@@ -79,6 +79,8 @@ Plugin 'maralla/completor.vim'
 Plugin 'liuchengxu/space-vim-dark'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
 
 
 " All of your Plugins must be added before the following line
@@ -106,3 +108,24 @@ set number
 colorscheme space-vim-dark
 set guifont=Aix:12
 
+" <leader> will be the space key
+let mapleader=" "
+" <maplocalleader> will be the '-' key
+let maplocalleader="-"
+
+set autochdir
+let NERDTreeChDirMode=2
+nnoremap <leader>file :NERDTree .<CR>
+
+" with this, we can now type ",." to exit out of insert mode
+" if we really wanted to type ",.", then just type one char, wait half a sec,
+" type another
+inoremap ,. <Esc>
+vnoremap ,. <Esc>
+
+
+"============================================================================"
+"=                                                                          ="
+"=                                Quickly Run                               ="
+"=                                                                          ="
+"============================================================================"
