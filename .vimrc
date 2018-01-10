@@ -117,6 +117,9 @@ set autochdir
 let NERDTreeChDirMode=2
 nnoremap <leader>file :NERDTree .<CR>
 
+set cursorcolumn
+set cursorline
+
 " with this, we can now type ",." to exit out of insert mode
 " if we really wanted to type ",.", then just type one char, wait half a sec,
 " type another
